@@ -58,7 +58,7 @@ def RH(df, sensor):
     col_to_mask = list(col_to_mask)
     working_df = df[['Tid'] + col_to_mask + ['P4_UL_T','P4_UL_H','P4_UL_P']]
     #working_df = df.loc[RH_mask, col_to_mask]
-    
+
     
     if working_df.shape[1] == 7:
         working_df = calculate_dew(working_df, sensor)
